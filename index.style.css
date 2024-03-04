@@ -1,0 +1,135 @@
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+*{
+    font-family: 'Comfortaa', sans-serif;
+    color: #202020;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+body{
+    margin: 0;
+}
+
+
+.logo h1{
+    font-family: 'Protest Riot', sans-serif;
+}
+
+.container{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.header-inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link{
+    color: #6c757d;
+}
+
+.nav-link:hover{
+    color: #000;
+    transition: .5s;
+}
+
+
+.intro-inner{
+    background-image: url("background.png");
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.intro-name{
+    font-size: 72px;
+    color: #fff;
+}
+
+.intro-description{
+    font-size: 24px;
+    color: #fff;
+    font-weight: 400;
+}
+
+
+.sponsor-btn{
+    padding: 10px 20px;
+    background-color: #426CEB;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+.roomer-photo{
+    width: 300px;
+    height: 250px;
+}
+
+.roomers{
+    margin-top: 40px;
+}
+
+.roomers-header{
+    font-weight: 400;
+    text-align: center;
+    
+}
+
+.roomers-line{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.roomer-name{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.more-roomers{
+    margin-top: 40px;
+}
+
+.more-roomers-inner{
+    background-image: url("back2.png");
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.morecats-btn{
+    padding: 10px 20px;
+    background-color: #426CEB;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
