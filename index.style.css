@@ -5,6 +5,8 @@ h1, h2, h3, h4, h5, h6{
 *{
     font-family: 'Comfortaa', sans-serif;
     color: #202020;
+
+
 }
 
 a{
@@ -15,6 +17,7 @@ a{
 
 body{
     margin: 0;
+    overflow-x: hidden;
 }
 
 
@@ -63,12 +66,14 @@ body{
 .intro-name{
     font-size: 72px;
     color: #fff;
+    text-align: center;
 }
 
 .intro-description{
     font-size: 24px;
     color: #fff;
     font-weight: 400;
+    text-align: center;
 }
 
 
@@ -109,6 +114,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .roomer-name{
@@ -129,6 +135,10 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.more-roomers-header{
+    text-align: center;
 }
 
 .morecats-btn, .feedback-btn{
@@ -226,6 +236,8 @@ body{
 
 .sponsors-header{
     color: #fff;
+    text-align: center;
+    word-wrap: normal;
 }
 
 
@@ -268,6 +280,7 @@ body{
 .footer-inner{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 svg circle{
@@ -352,16 +365,16 @@ svg path{
     color: #fff;
     font-size: 46px;
     text-align: center;
-    width: 1000px;
+    max-width: 1000px;
     margin-bottom: 60px;
 }
 
 .blog-intro-text{
     color: #cccccc;
-    width: 1000px;
     text-align: center;
     font-size: 24px;
     margin: 10px;
+    max-width: 1000px;
 }
 
 
@@ -389,6 +402,10 @@ svg path{
 
 .article-text{
     font-family: "Verdana";
+}
+
+.aritcle-photo{
+    max-width: 100%;
 }
 
 
@@ -430,7 +447,8 @@ svg path{
 .help-inner{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+ 
 }
 
 
@@ -448,7 +466,11 @@ svg path{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    
 }
+
+
 
 .rights-side{
     padding-top: 40px;
@@ -482,4 +504,151 @@ svg path{
     overflow: visible;
     border: 1px solid #cccccc;
     transition: 0.3s cubic-bezier(0, 1, 0, 1); 
+}
+
+
+
+
+
+
+/* adaptation */
+.header__burger-btn{
+    position: absolute;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: #fff;
+    z-index: 10000;
+    top: 15px;
+}
+
+
+.header__burger-btn span{
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #202020;
+    left: 5px;
+    transition: transform.5s, opacity .5s;
+}
+
+.header__burger-btn span:nth-child(1){
+    transform: translateY(-10px);
+}
+
+.header__burger-btn span:nth-child(3){
+    transform: translateY(10px);
+}
+
+.header.open .header__burger-btn span:nth-child(2){
+    opacity: 0;
+}
+
+.header.open .header__burger-btn span:nth-child(1){
+    transform: translateY(0) rotate(45deg);
+}
+
+.header.open .header__burger-btn span:nth-child(3){
+    transform: translateY(0) rotate(-45deg);
+}
+
+
+
+@media (max-width: 620px) {
+    .roomers-line{
+        justify-content: center;
+        gap: 20px;
+    }
+
+
+    .sponsors-text{
+        width: auto;
+    }
+}
+
+@media (max-width: 800px){
+
+    .header__burger-btn{
+        display: block;
+    }
+
+
+    .header-inner{
+        justify-content: end;
+        height: 10vh;
+        align-items: center;
+    }
+
+    .logo{
+        font-size: 25px;
+    }
+    
+    .nav{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        background: #fff;
+        /* padding: 20px 20px 20px 20px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: transform .5s;
+        margin: 0 !important;
+        transition: all .6s;
+        overflow: hidden;
+
+    }
+
+
+    .nav-link{
+        color: #202020;
+        font-weight: 900;
+        font-size: 21px;
+        padding: 10px 0;
+    }
+
+    .nav-link:hover{
+        color: #202020;
+    }
+
+    .nav.open {
+        width: 100%;
+        transition: all .6s;
+    }
+
+}
+
+
+
+
+
+
+@media (max-width: 800px){
+    .intro-blog-header{
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .blog-intro-text{
+        font-size: 16px;
+    }
+
+
+    .blog-inner{
+        grid-template-columns: 100%;
+        justify-content: center;
+    }
+
+
+    .question-img{
+        display: none;
+    }
+    
+
+    .help-inner{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
